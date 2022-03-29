@@ -12,3 +12,4 @@ CREATE TABLE `product_s` (
  `dimension` varchar(255),
   PRIMARY KEY  (`id`)
 );
+
