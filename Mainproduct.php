@@ -147,6 +147,15 @@ class productType extends Mainproduct
         return $this->dimension;
     }
 
+    public function validateForm()
+    {
+        if (!($this->sku && $this->name && $this->price)) {
+            header("Location:Form.php");
+        } else {
+            $this->insertData();
+        }
+    }
+
     public function insertData()
     {
         try {
