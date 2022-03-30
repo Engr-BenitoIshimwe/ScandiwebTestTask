@@ -14,7 +14,7 @@ if (isset($_POST['save'])) {
     $sc->set_length($_POST['length']);
     $sc->set_weight($_POST['weight']);
     $sc->set_dimension();
-    $sc->insertData();
+    $sc->validateForm();
 }
 
 if (isset($_POST['cancel'])) {
