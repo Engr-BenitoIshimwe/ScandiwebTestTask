@@ -12,7 +12,7 @@ include_once "header.php";
             <h2 class="nav__left">Product List</h2>
             <div class="nav__right">
                 <input class="nav__right-button btn btn-outline-primary" id="secondaryAdd" type="button" value="ADD">
-                <input class="nav__right-button btn btn-outline-danger active" type="button" id="delete-product-btn"  value="Mass Delete"/>
+                <input class="nav__right-button btn btn-outline-danger active" type="button" id="delete-product-btn"  value="MASS DELETE"/>
             </div>
         </nav>
     </div>
@@ -20,9 +20,9 @@ include_once "header.php";
 </div>
 <div class="container">
     <main class="main">
-        <form action="delete.php" method="POST">
-                    <input type="submit" name="add" id="primaryAdd" hidden>
-                    <input type="submit" name="delete" id="primaryDelete" hidden>
+        <form action="delete.php" id="product_form" method="POST">
+                    <input type="submit" name="add" id="primaryAdd" value="ADD" hidden>
+                    <input type="submit" name="delete" id="primaryDelete" value="MASS DELETE" id="delete-product-btn" hidden>
 
             <div class="row">
                             <?php
@@ -33,18 +33,18 @@ foreach ($all as $key => $val) {
     <div class='card border border-dark rounded'>
         <div class='card-body'>
             <input type='checkbox' class='delete-checkbox' name='checkbox[]' value=" <?=$val['id']?>">
-            <p class='card-text'><?=$val['sku']?></p>
-            <p><?=$val['n_ame']?></p>
-            <p><?=$val['price']?> $ </p>
+            <p class='card-text' id="sku"><?=$val['sku']?></p>
+            <p id="name"><?=$val['n_ame']?></p>
+            <p id="price"><?=$val['price']?> $ </p>
 
         <?php
 if ($val['size'] !== "") {
         ?>
-        <p> Size: <?=$val['size']?> MB </p>
+        <p id="size"> Size: <?=$val['size']?> MB </p>
         <?php
 } elseif ($val['w_eight'] !== "") {
         ?>
-        <p> Weight: <?=$val['w_eight']?> KG </p>
+        <p id="weight"> Weight: <?=$val['w_eight']?> Kg </p>
         <?php
 } elseif ($val['dimension'] !== "") {
         ?>
