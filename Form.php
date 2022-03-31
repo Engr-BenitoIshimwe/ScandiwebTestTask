@@ -24,7 +24,7 @@ include_once "header.php";
                     <form action="addition.php" id="product_form" method="POST">
                         <div class="form-group">
                             <input id="primarySave" type="submit" name="save" value="Save" hidden>
-                            <input id="primaryCancel" type="submit" name="cancel" hidden>
+                            <input id="primaryCancel" type="submit" value="Cancel" name="cancel" hidden>
                         </div>
                         <div class="form-group row">
                             <label for="sku" class="col-lg-2">SKU</label>
