@@ -21,7 +21,7 @@ include_once "header.php";
     <main class="main">
             <div class="row">
                 <div class="col-md-12 mt-3">
-                    <form action="addition.php" method="POST">
+                    <form action="addition.php" id="product_form" method="POST">
                         <div class="form-group">
                             <input id="primarySave" type="submit" name="save" value="Save" hidden>
                             <input id="primaryCancel" type="submit" name="cancel" hidden>
