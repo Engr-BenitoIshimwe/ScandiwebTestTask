@@ -2,7 +2,7 @@
 <div class="container">
 <footer class="footer fw-bold">
     <hr>
-    Scandiweb Test assignment
+BMSL&copy;2022
 </footer>
 </div>
 
